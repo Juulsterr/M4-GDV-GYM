@@ -1,2 +1,2 @@
 # M4-GDV-GYM
-[text](IMGIF/desktop.ini)
+[img](IMGIF/desktop.ini)
