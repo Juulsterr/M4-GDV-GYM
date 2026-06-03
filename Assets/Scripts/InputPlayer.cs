@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class InputPlayer : MonoBehaviour
 {
+
+    private Animator animator;
     [SerializeField] private InputActionAsset input;
     [SerializeField] private float walkSpeed = 5f;
     [SerializeField] private float turnSpeed = 150f;
@@ -18,6 +20,7 @@ public class InputPlayer : MonoBehaviour
 
     void Awake()
     {
+        animator = GetComponent<Animator>();
         InputActionMap map = input.FindActionMap(mapName);
         moveAction  = map.FindAction("Move");
         jumpAction  = map.FindAction("Jump");
@@ -40,6 +43,8 @@ public class InputPlayer : MonoBehaviour
         if (sprintAction.IsPressed())
             speed *= 2f;
 
+        animator.SetFloat("speed", speed);
+
         //bewegen van de speler
         Vector3 movement = transform.forward * speed * Time.deltaTime;
         transform.Translate(movement, Space.World);
@@ -54,6 +59,7 @@ public class InputPlayer : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+            animator.SetFloat("Jump", 1f);
         }
 
     }
