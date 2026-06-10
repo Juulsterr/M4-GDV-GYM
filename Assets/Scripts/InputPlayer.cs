@@ -59,7 +59,7 @@ public class InputPlayer : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
-            animator.SetFloat("Jump", 1f);
+            animator.SetTrigger("Jump");
         }
 
     }
