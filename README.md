@@ -9,3 +9,7 @@
 ![alt text](M4-GYM-Ding.gif)\
 ![alt text](M4-GYM-Ding-popertjeding.gif)
 * Hier is de character die een idle animatie doet en als de speed hoger gaat dan 0 gaat hij over naar de walk animatie. En als hij hoger gaat dan 5 sprint de speler en als hij op spatie klikt dan springt de speler.
+## Character controller opdracht
+![alt text](M4-GYM-Ding-CharacterController.gif)
+* Hier is de character controller die een idle animatie doet en als de speed hoger gaat dan 0 gaat hij over naar de walk animatie. En als hij hoger gaat dan 5 sprint de speler en als hij op spatie klikt dan springt de speler. De speler kan ook draaien met de input van de x as. Dit word allemaal gedaan met behulp van de character controller component.
+

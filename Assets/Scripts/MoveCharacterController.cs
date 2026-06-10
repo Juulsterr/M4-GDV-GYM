@@ -39,7 +39,7 @@ public class MoveCharacterController : MonoBehaviour
 
         Vector3 move = transform.forward * speed * Time.deltaTime; //De move variabele gebruiken we later in de Move() functie
         transform.Rotate(Vector3.up * movementInput.x * rotationSpeed * Time.deltaTime);
-
+        Debug.Log(characterController.isGrounded);
         if (characterController.isGrounded)
         {
             verticalVelocity = -1f; // kleine downward force om grounded te blijven
